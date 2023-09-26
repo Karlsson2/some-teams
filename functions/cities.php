@@ -3,8 +3,9 @@
 
     $cities = array();
     foreach ($teams as $team) {
-    $cities[] = $team['city'];
+        $cities[] = $team['city'];
     }
+    
     $uniqueCities = array_unique($cities);
 ?>
 
