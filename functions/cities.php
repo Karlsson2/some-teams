@@ -6,9 +6,8 @@
     $cities[] = $team['city'];
     }
     $uniqueCities = array_unique($cities);
+?>
 
-    foreach($uniqueCities as $city): echo
-        <<<ITEM
-            <p>$city</p>
-        ITEM;
-    endforeach;
+<?php foreach($uniqueCities as $city) : ?>
+    <p><?= $city?></p>
+<?php endforeach; ?>
