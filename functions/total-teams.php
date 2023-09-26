@@ -1,2 +1,5 @@
 <?php
-    echo "<p>total teams</p>";;
+    require __DIR__ . "../../data/data.php";
+    $totalNumberOfTeams = count($teams);
+
+    echo "$totalNumberOfTeams";
