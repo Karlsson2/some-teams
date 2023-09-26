@@ -9,5 +9,5 @@
 ?>
 
 <?php foreach($uniqueCities as $city) : ?>
-    <p><?= $city?></p>
+    <div class="city"><?= $city?></div>
 <?php endforeach; ?>
