@@ -1,28 +1,39 @@
 <?php
     require __DIR__ . "/header.php";
+    require __DIR__ ."/functions/cities.php";
+    require __DIR__ . "/functions/total-teams.php";
 ?>
 <main>
     <div class="content-column">
-        <div class="column-header">
-            <h2>League table</h2>
-            <p><?php require __DIR__ . "/functions/total-teams.php"?> Teams are playing right now</p>
-        </div>
-        <div class="column-content">
-            <table>
+        <table class="football-table">
+            <thead>
                 <tr>
                     <td>Team Name</td>
                     <td>League</td>
                     <td>Last Time Champions</td>
                     <td>City</td>
+                    <td>Nickname</td>
                     <td>Website</td>
                 </tr>
+            </thead>
+            <tbody>
                 <?php
                     require __DIR__ . "/functions/teams-table.php";
                 ?>
-            </table>
+            </tbody>
+        </table>
+        <div class="cities-column">
             <h2>Cities</h2>
             <div class="cities">
-                <?php require __DIR__ . "/functions/cities.php";?>
+                <?php foreach($uniqueCities as $city) : ?>
+                    <div class="city"><?= $city?></div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="teams-column">
+            <h2>Number of Teams</h2>
+            <div class="teams">
+                <?= $totalNumberOfTeams?>
             </div>
         </div>
     </div>

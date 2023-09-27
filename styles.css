@@ -1,5 +1,7 @@
 :root{
-    --article-background: #f3f3f3;
+    --white: #fff;
+    --dark-grey: #2c2838;
+    --light-grey: #f5f5f5;
 }
 *{
     box-sizing:border-box;
@@ -8,8 +10,10 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(55deg,#d04186,#c89750);
 }
 header {
+    margin-top:2rem;
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -17,41 +21,95 @@ header {
 main {
     margin:0 auto;
     width:80vw;
-    display:flex;
-
 }
 .content-column {
     padding:3em;
     width:100%;
-    background: var(--article-background);
     border-radius: 1em;
-    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:1rem;
 }
-.column-content h2{
+.content-column h2{
     margin-top:2rem;
+}
+.cities-column {
+    width:calc(50% - 0.5rem);
 }
 .cities {
     margin-top:2rem;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-wrap:wrap;
+    padding:2rem;
+    height: 8rem;
+    color: var(--dark-grey);
 }
-.column-header{
-    text-align:center;
+.city {
+    padding: 0 1rem;
 }
-
+.teams-column{
+    width:calc(50% - 0.5rem);
+}
+.teams {
+    padding:2rem;
+    height: 8rem;
+    margin-top:2rem;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+    font-weight:bold;
+    color: var(--dark-grey);
+}
 h1{
     font-size:64px;
+    color: var(--white);
 }
 h2{
     font-size:32px;
     text-align:center;
+    color: var(--white);
 }
 table {
-    margin-top: 3rem;
     width:100%;
+    border-radius:0.8rem;
+    border-spacing: 0;  
+    border-collapse:collapse; 
+    overflow:hidden ;
+    background-color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px; text-align:center;
 }
-.cities {
-    display: flex;
-    justify-content: space-around;
+table tr {
+    height: 2.5rem;
 }
-tr:first-child {
+table thead tr {
+    height: 60px;
+    background: var(--dark-grey);
+    font-size: 1.1rem;
+    color: var(--white);
+
+}
+tbody tr:nth-child(even) {
+    background-color: var(--light-grey);
+}
+tbody {
+    color:var(--dark-grey);
+}
+tbody a {
+    text-decoration: none;
     font-weight:bold;
+    color: var(--dark-grey);
+}
+tbody a:hover{
+    text-decoration: underline;
 }
