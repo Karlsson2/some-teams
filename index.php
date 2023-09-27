@@ -5,7 +5,7 @@
 ?>
 <main>
     <div class="content-column">
-        <table class="football-table">
+        <table>
             <thead>
                 <tr>
                     <td>Team Name</td>

@@ -1,7 +1,7 @@
 :root{
     --white: #fff;
     --dark-grey: #2c2838;
-    --light-grey: #f5f5f5;
+    --light-grey: #f6f6f6;
 }
 *{
     box-sizing:border-box;
@@ -22,6 +22,16 @@ main {
     margin:0 auto;
     width:80vw;
 }
+h1{
+    font-size:64px;
+    color: var(--white);
+}
+h2{
+    font-size:32px;
+    text-align:center;
+    color: var(--white);
+    margin-top:2rem;
+}
 .content-column {
     padding:3em;
     width:100%;
@@ -30,9 +40,9 @@ main {
     flex-wrap: wrap;
     gap:1rem;
 }
-.content-column h2{
-    margin-top:2rem;
-}
+
+/*Styling of the columns containing the cities*/
+
 .cities-column {
     width:calc(50% - 0.5rem);
 }
@@ -53,6 +63,9 @@ main {
 .city {
     padding: 0 1rem;
 }
+
+/*Styling of the column containing the number of teams*/
+
 .teams-column{
     width:calc(50% - 0.5rem);
 }
@@ -71,15 +84,9 @@ main {
     font-weight:bold;
     color: var(--dark-grey);
 }
-h1{
-    font-size:64px;
-    color: var(--white);
-}
-h2{
-    font-size:32px;
-    text-align:center;
-    color: var(--white);
-}
+
+/*Styling of the Table*/
+
 table {
     width:100%;
     border-radius:0.8rem;
@@ -93,7 +100,7 @@ table tr {
     height: 2.5rem;
 }
 table thead tr {
-    height: 60px;
+    height: 4rem;
     background: var(--dark-grey);
     font-size: 1.1rem;
     color: var(--white);
