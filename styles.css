@@ -3,6 +3,7 @@
     --dark-grey: #2c2838;
     --light-grey: #f6f6f6;
 }
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -119,4 +120,14 @@ tbody a {
 }
 tbody a:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .teams-column, .cities-column {
+        width:100%!important;
+    }
+    table {
+        width:100%;
+        overflow-x: scroll;
+    }
 }
