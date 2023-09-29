@@ -9,7 +9,7 @@ require __DIR__ . "../../data/data.php";
         <td data-label="Team Name"><?= $key ?></td>
         <td data-label="League"><?= $team['league'] ?></td>
         <?php if (is_null($team['last-time-champions'])) : ?>
-            <td data-label="Last time champions">Haven't been champions</td>
+            <td data-label="Last time champions">-</td>
         <?php else : ?>
             <td data-label="Last time champions"><?= $team['last-time-champions'] ?></td>
         <?php endif; ?>
@@ -19,7 +19,7 @@ require __DIR__ . "../../data/data.php";
             <td data-label="Nickname"><?= $team['nickname'] ?></td>
         <?php else : ?>
             <!--if they dont have the nickname key print an empty table cell -->
-            <td></td>
+            <td>-</td>
         <?php endif; ?>
         <td data-label="Website"><a href="<?= $team['url'] ?>"><?= $key ?></td>
     </tr>
