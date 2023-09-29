@@ -8,7 +8,11 @@ require __DIR__ . "../../data/data.php";
     <tr>
         <td data-label="Team Name"><?= $key ?></td>
         <td data-label="League"><?= $team['league'] ?></td>
-        <td data-label="Last time champions"><?= $team['last-time-champions'] ?></td>
+        <?php if (is_null($team['last-time-champions'])) : ?>
+            <td data-label="Last time champions">Haven't been champions</td>
+        <?php else : ?>
+            <td data-label="Last time champions"><?= $team['last-time-champions'] ?></td>
+        <?php endif; ?>
         <td data-label="City"><?= $team['city'] ?></td>
         <!-- if statement to catch the arrays that dont contain nickname keys -->
         <?php if (array_key_exists("nickname", $team)) : ?>
