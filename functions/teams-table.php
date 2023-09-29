@@ -6,17 +6,17 @@
 
 <?php foreach($teams as $key => $team) : ?>
     <tr>
-        <td><?= $key?></td>
-        <td><?= $team['league']?></td>
-        <td><?= $team['last-time-champions']?></td>
-        <td><?= $team['city']?></td>
+        <td data-label="Team Name"><?= $key?></td>
+        <td data-label="League"><?= $team['league']?></td>
+        <td data-label="Last time champions"><?= $team['last-time-champions']?></td>
+        <td data-label="City"><?= $team['city']?></td>
         <!-- if statement to catch the arrays that dont contain nickname keys -->
         <?php if(array_key_exists("nickname", $team)) : ?>
-            <td><?= $team['nickname']?></td>
+            <td data-label="Nickname"><?= $team['nickname']?></td>
         <?php else :?>
             <!--if they dont have the nickname key print an empty table cell -->
             <td></td>
         <?php endif;?>
-        <td><a href="<?= $team['url']?>"><?= $key?></td>
+        <td data-label="Website"><a href="<?= $team['url']?>"><?= $key?></td>
     </tr>
 <?php endforeach; ?>
