@@ -1,176 +1,169 @@
-:root{
-    --white: #fff;
-    --dark-grey: #2c2838;
-    --light-grey: #f6f6f6;
+:root {
+  --white: #fff;
+  --dark-grey: #2c2838;
+  --light-grey: #f6f6f6;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(55deg,#d04186,#c89750);
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(55deg, #d04186, #c89750);
+  background-attachment: fixed;
 }
 header {
-    margin-top:2rem;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 main {
-    margin:0 auto;
-    width:80vw;
+  margin: 0 auto;
+  width: 80vw;
 }
-h1{
-    font-size:64px;
-    color: var(--white);
+h1 {
+  font-size: 64px;
+  color: var(--white);
 }
-h2{
-    font-size:32px;
-    text-align:center;
-    color: var(--white);
-    margin-top:2rem;
+h2 {
+  font-size: 32px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 2rem;
 }
 .content-column {
-    padding:3em;
-    width:100%;
-    border-radius: 1em;
-    display:flex;
-    flex-wrap: wrap;
-    gap:1rem;
+  padding: 3em;
+  width: 100%;
+  border-radius: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /*Styling of the columns containing the cities*/
 
 .cities-column {
-    width:calc(50% - 0.5rem);
+  width: calc(50% - 0.5rem);
 }
 .cities {
-    margin-top:2rem;
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    flex-wrap:wrap;
-    padding:2rem;
-    height: 8rem;
-    color: var(--dark-grey);
+  margin-top: 2rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  height: 8rem;
+  color: var(--dark-grey);
 }
 .city {
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 /*Styling of the column containing the number of teams*/
 
-.teams-column{
-    width:calc(50% - 0.5rem);
+.teams-column {
+  width: calc(50% - 0.5rem);
 }
 .teams {
-    padding:2rem;
-    height: 8rem;
-    margin-top:2rem;
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: 4rem;
-    font-weight:bold;
-    color: var(--dark-grey);
+  padding: 2rem;
+  height: 8rem;
+  margin-top: 2rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--dark-grey);
 }
 
 /*Styling of the Table*/
 
 table {
-    table-layout: fixed;
-    width:100%;
-    border-radius:0.8rem;
-    border-spacing: 0;  
-    border-collapse:collapse; 
-    overflow:hidden ;
-    background-color: var(--white);
-    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px; text-align:center;
+  table-layout: fixed;
+  width: 100%;
+  border-radius: 0.8rem;
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  text-align: center;
 }
 table td {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 table thead tr {
-    height: 4rem;
-    background: var(--dark-grey);
-    font-size: 1.1rem;
-    color: var(--white);
-
+  height: 4rem;
+  background: var(--dark-grey);
+  font-size: 1.1rem;
+  color: var(--white);
 }
 tbody tr:nth-child(even) {
-    background-color: var(--light-grey);
+  background-color: var(--light-grey);
 }
 tbody {
-    color:var(--dark-grey);
+  color: var(--dark-grey);
 }
 tbody a {
-    text-decoration: none;
-    font-weight:bold;
-    color: var(--dark-grey);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--dark-grey);
 }
-tbody a:hover{
-    text-decoration: underline;
+tbody a:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 533px) {
-    h1{font-size:3rem;}
+  h1 {
+    font-size: 3rem;
+  }
 }
 @media screen and (max-width: 1024px) {
-    .content-column{
-        padding:0px;
-        margin-bottom:2rem;
-    }
-    .teams-column, .cities-column {
-        width:100%;
-    }
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-    
-    table tr {
-      display: block;
-      padding:2rem;
-      height:unset;
-    }
-    
-    table td {
-      display: block;
-      font-size: .9rem;
-      text-align: right;
-    }
-    
-    table td::before {
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+  .content-column {
+    padding: 0px;
+    margin-bottom: 2rem;
+  }
+  .teams-column,
+  .cities-column {
+    width: 100%;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  table tr {
+    display: block;
+    padding: 2rem;
+    height: unset;
+  }
+
+  table td {
+    display: block;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
