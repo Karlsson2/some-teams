@@ -19,7 +19,7 @@ require __DIR__ . "../../data/data.php";
             <td data-label="Nickname"><?= $team['nickname'] ?></td>
         <?php else : ?>
             <!--if they dont have the nickname key print an empty table cell -->
-            <td>-</td>
+            <td data-label="Nickname">-</td>
         <?php endif; ?>
         <td data-label="Website"><a href="<?= $team['url'] ?>"><?= $key ?></td>
     </tr>
